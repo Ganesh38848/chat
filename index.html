@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MiniChat — Persistent Chat Demo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <h1>MiniChat</h1>
+      <label>Room ID
+        <input id="roomId" placeholder="room-123" value="room-1" />
+      </label>
+      <label>Your name
+        <input id="name" placeholder="Alice" value="Alice" />
+      </label>
+      <button id="joinBtn">Join Room</button>
+      <div id="status" class="muted">Not connected</div>
+      <div id="users" class="muted"></div>
+    </aside>
+
+    <main class="chat">
+      <header>
+        <div id="roomLabel">Not in a room</div>
+        <div class="actions">
+          <span id="typing" class="muted"></span>
+        </div>
+      </header>
+
+      <section id="messages" class="messages"></section>
+
+      <form id="msgForm" class="composer" onsubmit="return false;">
+        <input id="msgInput" placeholder="Type a message" autocomplete="off" />
+        <button id="sendBtn" disabled>Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/client.js"></script>
+</body>
+</html>
